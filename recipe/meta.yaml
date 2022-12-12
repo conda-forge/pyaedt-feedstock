@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "0.6.28" %}
+{% set version = "0.6.36" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: 1fd0c485ecdf43fb506f79964c559b86d9ca908a4272fc11a17c5efb82c75a01
+  sha256: a1ec99022737c30ff69ecdc54c7a2712b0154c043b0540cbb5275be31108ce11
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -46,9 +46,6 @@ about:
   license: MIT AND BSD-3-Clause
   license_file:
     - LICENSE
-    - testenv/Lib/site-packages/idna-3.4.dist-info/LICENSE.md
-    - testenv/Lib/site-packages/scipy/fft/_pocketfft/LICENSE.md
-    - testenv/Lib/site-packages/traitlets-5.5.0.dist-info/licenses/COPYING.md
 
 extra:
   recipe-maintainers:
