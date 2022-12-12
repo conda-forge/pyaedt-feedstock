@@ -46,6 +46,8 @@ about:
   license: MIT AND BSD-3-Clause
   license_file:
     - LICENSE
+  doc_url: https://aedt.docs.pyansys.com/
+  dev_url: https://github.com/pyansys/pyaedt
 
 extra:
   recipe-maintainers:
