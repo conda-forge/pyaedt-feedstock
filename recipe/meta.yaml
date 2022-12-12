@@ -46,9 +46,6 @@ about:
   license: MIT AND BSD-3-Clause
   license_file:
     - LICENSE
-    - testenv/Lib/site-packages/idna-3.4.dist-info/LICENSE.md
-    - testenv/Lib/site-packages/scipy/fft/_pocketfft/LICENSE.md
-    - testenv/Lib/site-packages/traitlets-5.5.0.dist-info/licenses/COPYING.md
 
 extra:
   recipe-maintainers:
