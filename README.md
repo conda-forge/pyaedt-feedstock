@@ -9,6 +9,10 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaedt-feedstoc
 
 Summary: Higher-Level Pythonic Ansys Electronics Desktop Framework
 
+Development: https://github.com/pyansys/pyaedt
+
+Documentation: https://aedt.docs.pyansys.com/
+
 Current build status
 ====================
 
