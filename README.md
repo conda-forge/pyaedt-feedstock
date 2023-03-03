@@ -1,11 +1,11 @@
-About pyaedt
-============
+About pyaedt-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaedt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pyaedt/
 
 Package license: MIT AND BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaedt-feedstock/blob/main/LICENSE.txt)
 
 Summary: Higher-Level Pythonic Ansys Electronics Desktop Framework
 
