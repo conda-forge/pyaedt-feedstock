@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "0.6.53" %}
+{% set version = "0.6.54" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: 60517fe6488bb50f109577008eb369e986db12ba178232d3be4da79887ff2ef5
+  sha256: bf4d53717c4ec873f5167998d4a9e4ff28a5eb96024d33244491bd5eb8e25a40
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
