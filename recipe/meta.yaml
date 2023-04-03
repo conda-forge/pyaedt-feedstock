@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python
+    - flit-core >=3.2,<4
 
   run:
     - python
