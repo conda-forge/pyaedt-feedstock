@@ -1,7 +1,6 @@
 {% set name = "pyaedt" %}
 {% set version = "0.6.57" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
