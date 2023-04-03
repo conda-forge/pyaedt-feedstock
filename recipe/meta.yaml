@@ -1,6 +1,7 @@
 {% set name = "pyaedt" %}
 {% set version = "0.6.57" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -21,6 +22,7 @@ requirements:
   host:
     - pip
     - python
+    - flit-core >=3.2,<4
 
   run:
     - python
