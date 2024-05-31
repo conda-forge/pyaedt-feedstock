@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -29,7 +29,7 @@ requirements:
     - dotnet-aspnetcore ==3.1.23  # [linux]
     - cffi ==1.16.0  # [linux]
     - pywin32 >=303  # [win]
-    - pythonnet ==3.0.2
+    - pythonnet ==3.0.3
     - rpyc ==5.0.1
     - pyvista >=0.34.1
     - numpy
