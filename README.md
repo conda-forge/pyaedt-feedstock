@@ -267,4 +267,5 @@ Feedstock Maintainers
 * [@MaxJPRey](https://github.com/MaxJPRey/)
 * [@Samuelopez-ansys](https://github.com/Samuelopez-ansys/)
 * [@maxcapodi78](https://github.com/maxcapodi78/)
+* [@SMoraisAnsys](https://github.com/SMoraisAnsys/)
 
