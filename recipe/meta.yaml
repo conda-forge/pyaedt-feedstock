@@ -37,6 +37,7 @@ requirements:
     - psutil
     - pandas
     - jsonschema
+    - pyyaml
 
 test:
   imports:
