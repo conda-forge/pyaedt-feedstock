@@ -19,8 +19,8 @@ bash $MINIFORGE_FILE -b -p ${MINIFORGE_HOME}
 ( endgroup "Installing a fresh version of Miniforge" ) 2> /dev/null
 
 ( startgroup "Configuring conda" ) 2> /dev/null
-
-source ${MINIFORGE_HOME}/etc/profile.d/conda.sh
+echo "Activating environment"
+source "${MINIFORGE_HOME}/etc/profile.d/conda.sh"
 conda activate base
 export CONDA_SOLVER="libmamba"
 export CONDA_LIBMAMBA_SOLVER_NO_CHANNELS_FROM_INSTALLED=1
