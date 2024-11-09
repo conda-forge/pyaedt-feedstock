@@ -27,6 +27,7 @@ requirements:
     - python
     - mono  # [linux]
     - dotnet-aspnetcore ==3.1.23  # [linux]
+    - defusedxml
     - cffi ==1.16.0  # [linux]
     - pywin32 >=303  # [win]
     - pythonnet ==3.0.3
