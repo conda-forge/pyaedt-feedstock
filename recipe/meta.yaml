@@ -1,13 +1,13 @@
 {% set name = "pyaedt" %}
-{% set version = "0.11.5" %}
+{% set version = "0.11.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: ebcdcdb540ed992b94d245a583c16d41186ec0ccc6ea0664a2cd479260837d82
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
+  sha256: 895c8e291ac72cb5df7ef228ef6332a2315cf8abe8c42abdacd92a629b657092
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
