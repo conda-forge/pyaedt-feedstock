@@ -39,7 +39,7 @@ requirements:
     - pandas
     - jsonschema
     - pyyaml
-    - {{ 'tomli' if py < 3.11 else '' }}
+    - tomli
     - tomli-w
 
 test:
