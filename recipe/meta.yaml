@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "0.11.7" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: 9d9dfa8230fc6f50610cfb188e430789890e8f04b6bf213f10ea20c14fc24159
+  sha256: 15e956e50d6a05d04cc1abfe9251cc924d64a61a7db4a68cb8ac4d5b50656140
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -39,6 +39,8 @@ requirements:
     - pandas
     - jsonschema
     - pyyaml
+    - tomli
+    - tomli-w
 
 test:
   imports:
