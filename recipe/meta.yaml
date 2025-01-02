@@ -39,6 +39,8 @@ requirements:
     - pandas
     - jsonschema
     - pyyaml
+    - tomli
+    - tomli-w
 
 test:
   imports:
