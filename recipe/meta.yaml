@@ -41,6 +41,7 @@ requirements:
     - pyyaml
     - tomli
     - tomli-w
+    - grpcio >=1.50.0,<1.71
 
 test:
   imports:
