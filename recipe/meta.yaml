@@ -21,11 +21,11 @@ requirements:
 
   host:
     - pip
-    - python >=3.10,<3.13
+    - python
     - flit-core >=3.2,<4
 
   run:
-    - python >=3.10,<3.13
+    - python
     - mono  # [linux]
     - defusedxml
     - dotnet-aspnetcore ==3.1.23  # [linux]
