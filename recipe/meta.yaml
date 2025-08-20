@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [osx or py<310]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,16 +22,16 @@ requirements:
   host:
     - pip
     - python
-    - flit-core >=3.2,<4
+    - setuptools
 
   run:
     - python
     - mono  # [linux]
     - defusedxml
     - dotnet-aspnetcore ==3.1.23  # [linux]
-    - cffi ==1.16.0  # [linux]
+    - cffi >=1.16.0  # [linux]
     - pywin32 >=303  # [win]
-    - pythonnet ==3.0.3
+    - pythonnet >=3.0.3
     - rpyc >=5.0.1
     - pyvista >=0.34.1
     - numpy
