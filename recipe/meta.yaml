@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -32,7 +32,7 @@ requirements:
     - cffi ==1.16.0  # [linux]
     - pywin32 >=303  # [win]
     - pythonnet ==3.0.3
-    - rpyc ==5.0.1
+    - rpyc >=5.0.1
     - pyvista >=0.34.1
     - numpy
     - matplotlib-base
@@ -43,6 +43,8 @@ requirements:
     - tomli
     - tomli-w
     - grpcio >=1.50.0,<1.71
+    - fpdf2
+    - pydantic
 
 test:
   imports:
