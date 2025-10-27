@@ -42,7 +42,7 @@ requirements:
     - pyyaml
     - tomli
     - tomli-w
-    - grpcio >=1.50.0,<1.71
+    - grpcio >=1.50.0,<1.76
     - fpdf2
     - pydantic
 
