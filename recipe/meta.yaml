@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "0.22.1" %}
+{% set version = "0.22.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: f3154ed2fd7604ad125be9954c97a1de646cb2641b0414368b6125f41314f79a
+  sha256: 866722cce52b9153b831a2f652bcc3d83a601c83135872c0a3a21e3cf903a061
 
 build:
   skip: true  # [osx or py<310]
