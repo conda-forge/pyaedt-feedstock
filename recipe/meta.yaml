@@ -45,6 +45,9 @@ requirements:
     - grpcio >=1.50.0,<1.76
     - fpdf2
     - pydantic
+    # NOTE: Adding scikit-rf to the requirements until v0.25.1 is out.
+    # See https://github.com/ansys/pyaedt/pull/7255 for more informations
+    - scikit-rf
 
 test:
   imports:
