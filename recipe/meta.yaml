@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [osx or py<310]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -48,7 +48,7 @@ requirements:
 
 test:
   imports:
-    - pyaedt
+    - ansys.aedt.core
 
 about:
   home: https://pypi.org/project/pyaedt/
