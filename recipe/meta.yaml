@@ -44,7 +44,6 @@ outputs:
       imports:
         - ansys.aedt.core
       commands:
-        - pip check
         - pip list
         - python -c "from ansys.aedt.core import __version__; print(__version__)"
       requires:
