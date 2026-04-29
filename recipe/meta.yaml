@@ -16,7 +16,8 @@ build:
 outputs:
   - name: pyaedt-base
     build:
-      script: {{ PYTHON }} -m pip install . -vv --no-deps
+      script: $PYTHON -m pip install . -vv --no-deps  # [not win]
+      script: "%PYTHON% -m pip install . -vv --no-deps"  # [win]
     requirements:
       build:
         - mono                        # [linux]
