@@ -16,12 +16,12 @@ build:
 outputs:
   - name: pyaedt-base
     build:
-      script: $PYTHON -m pip install . -vv --no-deps  # [not win]
+      script: $PYTHON -m pip install . -vv --no-deps     # [not win]
       script: "%PYTHON% -m pip install . -vv --no-deps"  # [win]
     requirements:
       build:
-        - mono                        # [linux]
-        - dotnet-aspnetcore ==3.1.23  # [linux]
+        - mono              # [linux]
+        - dotnet-sdk ~=7.0  # [linux]
       host:
         - python {{ python_min }}
         - setuptools
@@ -54,11 +54,11 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('pyaedt-base', exact=True) }}
-        - mono                        # [linux]
-        - dotnet-aspnetcore ==3.1.23  # [linux]
-        - cffi >=1.16.0,<2.1          # [linux]
+        - mono                  # [linux]
+        - dotnet-runtime ~=7.0  # [linux]
+        - cffi >=1.16.0,<2.1    # [linux]
         - ansys-pythonnet >=3.1.0rc3
-        - pywin32 >=303               # [win]
+        - pywin32 >=303         # [win]
     test:
       imports:
         - ansys.aedt.core
