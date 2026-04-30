@@ -84,7 +84,7 @@ outputs:
     test:
       imports:
         - ansys.aedt.core
-        - ansys.aedt.core.visualization.plot.fpdf
+        - ansys.aedt.core.visualization.plot.pdf
         - ansys.aedt.core.visualization.plot.matplotlib
         - ansys.aedt.core.visualization.plot.pyvista
       requires:
