@@ -1,5 +1,5 @@
 channel_sources:
-- conda-forge
+- conda-forge/label/ansys-pythonnet_rc,conda-forge
 channel_targets:
 - conda-forge main
 docker_image:
