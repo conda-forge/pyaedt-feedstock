@@ -16,7 +16,7 @@ build:
 outputs:
   - name: pyaedt
     build:
-      script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+      script: python -m pip install . -vv --no-deps --no-build-isolation
     requirements:
       build:
         - mono              # [linux]
