@@ -11,6 +11,7 @@ source:
 
 build:
   skip: true  # [osx or py<310]
+  script: python -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
