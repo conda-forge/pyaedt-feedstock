@@ -11,75 +11,60 @@ source:
 
 build:
   skip: true  # [osx or py<310]
-  number: 0
+  number: 1
 
-outputs:
-  - name: pyaedt
-    build:
-      script: python -m pip install . -vv --no-deps --no-build-isolation
-    requirements:
-      build:
-        - mono              # [linux]
-        - dotnet-sdk ~=7.0  # [linux]
-      host:
-        - python {{ python_min }}
-        - setuptools
-        - pip
-      run:
-        - python >={{ python_min }}
-        # Direct dependencies
-        - ansys-tools-common
-        - defusedxml >=0.7,<8.0
-        - grpcio >=1.50.0,<1.81
-        - jsonschema
-        - numpy >=1.20.0,<2.3
-        - psutil >=6.0.0
-        - pydantic >=2.6.4,<2.14
-        - pyyaml
-        - pyedb ==0.74.0
-        - tomli
-        - tomli-w
-        # NOTE: Optional dependencies (not strictly required, but commonly used)
-        - openpyxl >=3.1.0,<3.3
-        - pandas >=1.1.0,<2.4
-        - fast-simplification >=0.1.7
-        - scikit-rf >=0.30.0,<1.12
-        - rpyc >=6.0.0,<6.1
-        - requests
-        # NOTE: Graphics dependencies (pyvista[io] is explicity list below)
-        - ansys-tools-visualization-interface
-        # pyvista[io] extra (conda has no extras syntax)
-        - pyvista >=0.38.0,<0.48
-        - imageio
-        - meshio >=5.2
-        # 
-        - matplotlib-base
-        - vtk >=9.0,<9.7
-        - fpdf2
-        - pillow
-        # NOTE: .NET related dependencies
-        - mono                  # [linux]
-        - dotnet-runtime ~=7.0  # [linux]
-        - cffi >=1.16.0,<2.1    # [linux]
-        - ansys-pythonnet >=3.1.0rc3
-        - pywin32 >=303         # [win]
+requirements:
+  build:
+    - mono  # [linux]
+    - dotnet-sdk ~=7.0  # [linux]
 
-    test:
-      imports:
-        - ansys.aedt.core
-        # .NET related imports
-        - ansys.aedt.core.internal.clr_module
-        # Graphics related imports
-        - ansys.aedt.core.visualization.plot.pdf
-        - ansys.aedt.core.visualization.plot.matplotlib
-        - ansys.aedt.core.visualization.plot.pyvista
-      commands:
-        - pip check
-        - pip list
-        - python -c "from ansys.aedt.core import __version__; print(__version__)"
-      requires:
-        - pip
-        - python {{ python_min }}
+  host:
+    - pip
+    - python {{ python_min }}
+    - setuptools
+
+  run:
+    - python >={{ python_min }}
+    # Direct dependencies
+    - ansys-tools-common
+    - defusedxml >=0.7,<8.0
+    - grpcio >=1.50.0,<1.81
+    - jsonschema
+    - numpy >=1.20.0,<2.3
+    - psutil >=6.0.0
+    - pydantic >=2.6.4,<2.14
+    - pyyaml
+    - pyedb ==0.74.0
+    - tomli
+    - tomli-w
+    # NOTE: Optional dependencies (not strictly required, but commonly used)
+    - openpyxl >=3.1.0,<3.3
+    - pandas >=1.1.0,<2.4
+    - fast-simplification >=0.1.7
+    - scikit-rf >=0.30.0,<1.12
+    - rpyc >=6.0.0,<6.1
+    - requests
+    # NOTE: Graphics dependencies (pyvista[io] is explicity list below)
+    - ansys-tools-visualization-interface
+    # pyvista[io] extra (conda has no extras syntax)
+    - pyvista >=0.38.0,<0.48
+    - imageio
+    - meshio >=5.2
+    # 
+    - matplotlib-base
+    - vtk >=9.0,<9.7
+    - fpdf2
+    - pillow
+    # NOTE: .NET related dependencies
+    - mono                  # [linux]
+    - dotnet-runtime ~=7.0  # [linux]
+    - cffi >=1.16.0,<2.1    # [linux]
+    - ansys-pythonnet >=3.1.0rc3
+    - pywin32 >=303         # [win]
+
+test:
+  imports:
+    - ansys.aedt.core
 
 about:
   home: https://pypi.org/project/pyaedt/
