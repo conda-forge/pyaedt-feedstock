@@ -20,11 +20,11 @@ requirements:
 
   host:
     - pip
-    - python {{ python_min }}
+    - python
     - setuptools
 
   run:
-    - python >={{ python_min }}
+    - python
     # Direct dependencies
     - ansys-tools-common
     - defusedxml >=0.7,<8.0
