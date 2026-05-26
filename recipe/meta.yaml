@@ -28,22 +28,22 @@ requirements:
     - python
     # Direct dependencies
     - ansys-tools-common
-    - defusedxml >=0.7,<8.0
-    - grpcio >=1.50.0,<1.81
+    - defusedxml >=0.7
+    - grpcio >=1.50.0
     - jsonschema
-    - numpy >=1.20.0,<2.3
+    - numpy >=1.20.0
     - psutil >=6.0.0
-    - pydantic >=2.6.4,<2.14
+    - pydantic >=2.6.4
     - pyyaml
-    - pyedb ==0.74.0
+    - pyedb >=0.75.0
     - tomli
     - tomli-w
     # NOTE: Optional dependencies (not strictly required, but commonly used)
-    - openpyxl >=3.1.0,<3.3
-    - pandas >=1.1.0,<2.4
+    - openpyxl >=3.1.0
+    - pandas >=1.1.0
     - fast-simplification >=0.1.7
-    - scikit-rf >=0.30.0,<1.12
-    - rpyc >=6.0.0,<6.1
+    - scikit-rf >=0.30.0
+    - rpyc >=6.0.0
     - requests
     # NOTE: Graphics dependencies (pyvista[io] is explicity list below)
     - ansys-tools-visualization-interface
@@ -59,7 +59,7 @@ requirements:
     # NOTE: .NET related dependencies
     - mono                  # [linux]
     - dotnet-runtime ~=7.0  # [linux]
-    - cffi >=1.16.0,<2.1    # [linux]
+    - cffi >=1.16.0         # [linux]
     - ansys-pythonnet >=3.1.0rc3
     - pywin32 >=303         # [win]
 
