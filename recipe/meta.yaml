@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "0.20.1" %}
+{% set version = "0.28.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: b4749d5764c7a95b91a7060a4969ce951a20150b1e4d6248a27ba8b3e83ce24b
+  sha256: 95fa8059cfe5b1ad53a6fbd86a61466a15303c857c7ac96372071336da5183f9
 
 build:
   skip: true  # [osx or py<310]
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+  number: 3
 
 requirements:
   build:
     - mono  # [linux]
-    - dotnet-aspnetcore ==3.1.23  # [linux]
+    - dotnet-sdk ~=7.0  # [linux]
 
   host:
     - pip
@@ -26,29 +26,46 @@ requirements:
 
   run:
     - python
-    - mono  # [linux]
-    - defusedxml
-    - dotnet-aspnetcore ==3.1.23  # [linux]
-    - cffi >=1.16.0  # [linux]
-    - pywin32 >=303  # [win]
-    - pythonnet >=3.0.3
-    - rpyc >=5.0.1
-    - pyvista >=0.34.1
-    - numpy
-    - matplotlib-base
-    - psutil
-    - pandas
+    # Direct dependencies
+    - ansys-tools-common
+    - defusedxml >=0.7
+    - grpcio >=1.50.0
     - jsonschema
+    - numpy >=1.20.0
+    - psutil >=6.0.0
+    - pydantic >=2.6.4
     - pyyaml
+    - pyedb >=0.75.0
     - tomli
     - tomli-w
-    - grpcio >=1.50.0,<1.71
+    # NOTE: Optional dependencies (not strictly required, but commonly used)
+    - openpyxl >=3.1.0
+    - pandas >=1.1.0
+    - fast-simplification >=0.1.7
+    - scikit-rf >=0.30.0
+    - rpyc >=6.0.0
+    - requests
+    # NOTE: Graphics dependencies (pyvista[io] is explicity list below)
+    - ansys-tools-visualization-interface
+    # pyvista[io] extra (conda has no extras syntax)
+    - pyvista >=0.38.0,<0.48
+    - imageio
+    - meshio >=5.2
+    # 
+    - matplotlib-base
+    - vtk >=9.0,<9.7
     - fpdf2
-    - pydantic
+    - pillow
+    # NOTE: .NET related dependencies
+    - mono                  # [linux]
+    - dotnet-runtime ~=7.0  # [linux]
+    - cffi >=1.16.0         # [linux]
+    - ansys-pythonnet >=3.1.0rc3
+    - pywin32 >=303         # [win]
 
 test:
   imports:
-    - pyaedt
+    - ansys.aedt.core
 
 about:
   home: https://pypi.org/project/pyaedt/
