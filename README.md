@@ -38,38 +38,10 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>win_64_python3.10.____cpython</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18250&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18250&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18250&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18250&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18250&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.14.____cp314" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyaedt-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -86,6 +58,9 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pyaedt-green.svg)](https://anaconda.org/conda-forge/pyaedt) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyaedt.svg)](https://anaconda.org/conda-forge/pyaedt) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyaedt.svg)](https://anaconda.org/conda-forge/pyaedt) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyaedt.svg)](https://anaconda.org/conda-forge/pyaedt) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyaedt--base-green.svg)](https://anaconda.org/conda-forge/pyaedt-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyaedt-base.svg)](https://anaconda.org/conda-forge/pyaedt-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyaedt-base.svg)](https://anaconda.org/conda-forge/pyaedt-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyaedt-base.svg)](https://anaconda.org/conda-forge/pyaedt-base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyaedt--dotnet-green.svg)](https://anaconda.org/conda-forge/pyaedt-dotnet) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyaedt-dotnet.svg)](https://anaconda.org/conda-forge/pyaedt-dotnet) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyaedt-dotnet.svg)](https://anaconda.org/conda-forge/pyaedt-dotnet) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyaedt-dotnet.svg)](https://anaconda.org/conda-forge/pyaedt-dotnet) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyaedt--graphics-green.svg)](https://anaconda.org/conda-forge/pyaedt-graphics) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyaedt-graphics.svg)](https://anaconda.org/conda-forge/pyaedt-graphics) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyaedt-graphics.svg)](https://anaconda.org/conda-forge/pyaedt-graphics) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyaedt-graphics.svg)](https://anaconda.org/conda-forge/pyaedt-graphics) |
 
 Installing pyaedt
 =================
@@ -97,16 +72,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyaedt` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pyaedt, pyaedt-base, pyaedt-dotnet, pyaedt-graphics` can be installed with `conda`:
 
 ```
-conda install pyaedt
+conda install pyaedt pyaedt-base pyaedt-dotnet pyaedt-graphics
 ```
 
 or with `mamba`:
 
 ```
-mamba install pyaedt
+mamba install pyaedt pyaedt-base pyaedt-dotnet pyaedt-graphics
 ```
 
 It is possible to list all of the versions of `pyaedt` available on your platform with `conda`:
