@@ -51,6 +51,8 @@ outputs:
 
   - name: pyaedt-dotnet
     requirements:
+      host:
+        - python
       run:
         - {{ pin_subpackage('pyaedt-base', exact=True) }}
         - mono                  # [linux]
@@ -67,6 +69,8 @@ outputs:
 
   - name: pyaedt-graphics
     requirements:
+      host:
+        - python
       run:
         - {{ pin_subpackage('pyaedt-base', exact=True) }}
         - ansys-tools-visualization-interface
@@ -90,6 +94,8 @@ outputs:
 
   - name: pyaedt
     requirements:
+      host:
+        - python
       run:
         - {{ pin_subpackage('pyaedt-dotnet', exact=True) }}
         - {{ pin_subpackage('pyaedt-graphics', exact=True) }}
