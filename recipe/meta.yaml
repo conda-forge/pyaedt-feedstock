@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [osx or py<310]
-  number: 0
+  number: 1
 
 outputs:
   - name: pyaedt-base
@@ -23,7 +23,7 @@ outputs:
         - mono              # [linux]
       host:
         - pip
-        - python
+        - python {{ python }}
         - setuptools
       run:
         - python
@@ -47,12 +47,12 @@ outputs:
         - python -c "from ansys.aedt.core import __version__; print(__version__)"
       requires:
         - pip
-        - python {{ python_min }}
+        - python {{ python }}
 
   - name: pyaedt-dotnet
     requirements:
       host:
-        - python
+        - python {{ python }}
       run:
         - {{ pin_subpackage('pyaedt-base', exact=True) }}
         - mono                  # [linux]
@@ -65,12 +65,12 @@ outputs:
         - ansys.aedt.core
         - ansys.aedt.core.internal.clr_module
       requires:
-        - python {{ python_min }}
+        - python {{ python }}
 
   - name: pyaedt-graphics
     requirements:
       host:
-        - python
+        - python {{ python }}
       run:
         - {{ pin_subpackage('pyaedt-base', exact=True) }}
         - ansys-tools-visualization-interface
@@ -90,12 +90,12 @@ outputs:
         - ansys.aedt.core.visualization.plot.matplotlib
         - ansys.aedt.core.visualization.plot.pyvista
       requires:
-        - python {{ python_min }}
+        - python {{ python }}
 
   - name: pyaedt
     requirements:
       host:
-        - python
+        - python {{ python }}
       run:
         - {{ pin_subpackage('pyaedt-dotnet', exact=True) }}
         - {{ pin_subpackage('pyaedt-graphics', exact=True) }}
@@ -109,7 +109,7 @@ outputs:
       imports:
         - ansys.aedt.core
       requires:
-        - python {{ python_min }}
+        - python {{ python }}
 
 about:
   home: https://pypi.org/project/pyaedt/
