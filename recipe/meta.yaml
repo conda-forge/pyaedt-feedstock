@@ -1,5 +1,5 @@
 {% set name = "pyaedt" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pyaedt-{{ version }}.tar.gz
-  sha256: a729fbf36617050b8df1a9eb99a2bd783b97140c12d638bd3773c2f3d1433b2e
+  sha256: 8e7f2101735104f168fb8ca8d0357f68bbebd262c7f72333ae6cb06a07f49358
 
 build:
   skip: true  # [osx or py<310]
