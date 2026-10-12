@@ -34,7 +34,7 @@ outputs:
         - jsonschema
         - numpy >=1.20.0
         - psutil >=6.0.0
-        - pydantic >=2.6.4
+        - pydantic >=2.6.4,<2.14
         - pyyaml
         - pyedb >=0.75.0
         - tomli
