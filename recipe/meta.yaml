@@ -39,7 +39,7 @@ outputs:
         - pyedb >=0.75.0
         - tomli
         - tomli-w
-        - typing_extensions >= 4.4  # [py<313]
+        - typing_extensions >=4.4  # [py<313]
     test:
       imports:
         - ansys.aedt.core
